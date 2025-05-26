@@ -11,6 +11,7 @@ function verificarSePodeSerAdotado(idadeDog, porte) {
 
 
 
+
 function calcularConsumoDeRacao(nome, idade, peso) {
     const gramasPorDia = peso * 300
     return gramasPorDia
@@ -54,8 +55,10 @@ function decidirTipoDeAtividadePorPorte(porte) {
 
 
 
-async function buscarDadoAsync(resultado, nome) {
-    return await Promise.resolve('Pipoca');
+async function buscarDadoAsync() {
+    const nomeDog = 'Pipoca'
+    return nomeDog
+
 }
 
 
