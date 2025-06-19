@@ -1,0 +1,27 @@
+name: 'Execução Manual'
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  work-tests:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+
+      - name: Instalando o Yarn
+        run: npm install -g yarn
+
+      - name: Instalando as dependências
+        run:  yarn
+
+      - name: Instalando do Palywright
+        run:  yarn playwright install
+
+      - name: Executando Testes do Trabalho
+        run: npx mocha trabalhos/trabalho-final.js
